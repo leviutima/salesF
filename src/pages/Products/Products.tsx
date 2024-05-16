@@ -3,6 +3,8 @@ import { MainPageTitle,SectionConfig, ProductImage,SectionGridImgRight, SectionG
 import { Layout } from "../../components/Layout/Layout.tsx";
 import { Button } from "../../components/Button/Button.tsx";
 import { Link } from "react-router-dom";
+import salesCloudImg from '../../assets/images/close-more-deals-4-10 3.png'
+import einsteinImgProd from '../../assets/images/Quer-ter-experiencias-personalizadas_fb_ig_pt-br 5.png'
 
 
 export function Products() {
@@ -29,7 +31,7 @@ export function Products() {
 
                     <Link to="/Salescloud">
                     <ProductImage>
-                        <img src="src\assets\images\close-more-deals-4-10 3.png" alt="Notebook e celular com produto da salesforce sendo exibido" />
+                        <img src={salesCloudImg} alt="Notebook e celular com produto da salesforce sendo exibido" />
                     </ProductImage>
                     </Link>
                 </SectionGridImgLeft>
@@ -37,7 +39,7 @@ export function Products() {
                 <SectionGridImgRight>
                     <Link to="/Einstein-gpt"> 
                     <ProductImage>
-                        <img src="src\assets\images\Quer-ter-experiencias-personalizadas_fb_ig_pt-br 5.png" alt="Monitor exibindo produto da salesforce" />
+                        <img src={einsteinImgProd} alt="Monitor exibindo produto da salesforce" />
                     </ProductImage>
                     </Link>
                     <SectionConfig>
