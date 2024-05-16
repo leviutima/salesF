@@ -104,7 +104,7 @@ function Contact() {
                                 <input type="text" id="pais" name="pais" value={formData.pais} onChange={handleInputChange} placeholder="País/Região" style={Input}></input>
                             </div>
                             <div>
-                                <textarea id="desc_form" name="desc_form" value={formData.desc_form} onChange={handleInputChange} placeholder="Perguntas/Comentários" style={InputBox}></textarea>
+                                <input type="text" id="desc_form" name="desc_form" value={formData.desc_form} onChange={handleInputChange} placeholder="Perguntas/Comentários" style={InputBox}></input>
                             </div>
                             <Button type="submit" onClick={handleSubmit}>Enviar</Button>
                         </FormSection>
