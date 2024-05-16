@@ -1,4 +1,3 @@
-import ClickerColector from "../../assets/ClickRegister/NavigationTracker";
 import Footer from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import { LayoutWrapperElement } from "./Layout.style";

@@ -1,4 +1,3 @@
-import React from "react";
 import { HeaderElement, HeaderWrapperElement, LogoElement } from "./Header.style";
 import Logo from "../../assets/logo-salesforce.svg";
 import { MainMenu } from "../MainMenu/MainMenu";
