@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from "react";
+import { ButtonHTMLAttributes, FormEvent } from "react";
 import { ButtonElement } from "./Button.style";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -6,7 +6,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   inverse?: boolean;
   size?: "large" | "small" | undefined;
   variant?: "info" | "danger" | undefined;
-  onClick: () => void;
+  onClick: (event: FormEvent<HTMLButtonElement>) => void;
 }
 
 export const Button = ({
@@ -19,4 +19,3 @@ export const Button = ({
     </ButtonElement>
   );
 };
-

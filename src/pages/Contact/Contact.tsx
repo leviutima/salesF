@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { Button } from "../../components/Button/Button"
-import { Layout } from "../../components/Layout/Layout"
-import { BackgroundForm, FormSection, Input, InputBox, ParagraphForm } from "./Contact.style"
-import { ConfigDiv, FlexSection, MainPageTitle, SectionConfig } from "../../components/Sections/Sections.style"
+import { useState, ChangeEvent, FormEvent } from 'react';
 
+import { Button } from "../../components/Button/Button";
+import { Layout } from "../../components/Layout/Layout";
+import { BackgroundForm, FormSection, Input, InputBox, ParagraphForm } from "./Contact.style";
+import { ConfigDiv, FlexSection, MainPageTitle, SectionConfig } from "../../components/Sections/Sections.style";
 
 function Contact() {
-
     const [formData, setFormData] = useState({
         nm_clie: '',
         sobrenome: '',
@@ -20,8 +19,7 @@ function Contact() {
         seg_empresa: ''
     });
 
-    // Função para lidar com a mudança nos inputs do formulário
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
         setFormData(prevState => ({
             ...prevState,
@@ -29,12 +27,10 @@ function Contact() {
         }));
     };
 
-    // Função para lidar com o envio do formulário
-    const handleSubmit = async (event: React.FormEvent) => {
+    const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
 
         try {
-            // Envia os dados do formulário para a API
             const response = await fetch('http://127.0.0.1:5000/contatenos', {
                 method: 'POST',
                 headers: {
@@ -44,10 +40,8 @@ function Contact() {
             });
 
             if (response.ok) {
-                // Dados enviados com sucesso
                 console.log('Dados enviados com sucesso!');
             } else {
-                // Se ocorrer um erro ao enviar os dados
                 console.error('Erro ao enviar os dados.');
             }
         } catch (error) {
@@ -71,11 +65,11 @@ function Contact() {
                                 <p>Podemos te ajudar!</p>
                             </div>
                             <div>
-                                <img src="src\assets\images\Group 26.png"></img>
+                                <img src="src\assets\images\Group 26.png" alt="Illustration"></img>
                             </div>
                         </ConfigDiv>
                     </SectionConfig>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <FormSection>
                             <ParagraphForm>
                                 <p>
@@ -103,22 +97,22 @@ function Contact() {
                             <div>
                                 <input type="text" id="seg_empresa" name="seg_empresa" value={formData.seg_empresa} onChange={handleInputChange} placeholder="Segmento" style={Input}></input>
                             </div>
-                            <   div>
+                            <div>
                                 <input type="number" id="tamanho_empresa" name="tamanho_empresa" value={formData.tamanho_empresa} onChange={handleInputChange} placeholder="Tamanho da empresa" style={Input}></input>
                             </div>
                             <div>
                                 <input type="text" id="pais" name="pais" value={formData.pais} onChange={handleInputChange} placeholder="País/Região" style={Input}></input>
                             </div>
                             <div>
-                                <input type="text" id="desc_form" name="desc_form" value={formData.desc_form} onChange={handleInputChange} placeholder="Perguntas/Comentários" style={InputBox}></input>
+                                <textarea id="desc_form" name="desc_form" value={formData.desc_form} onChange={handleInputChange} placeholder="Perguntas/Comentários" style={InputBox}></textarea>
                             </div>
-                            <Button onClick={handleSubmit} type="submit">Enviar</Button>
+                            <Button type="submit" onClick={handleSubmit}>Enviar</Button>
                         </FormSection>
-                        </form>
+                    </form>
                 </FlexSection>
             </Layout>
         </div>
-    )
+    );
 }
 
-export default Contact
+export default Contact;
