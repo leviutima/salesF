@@ -1,6 +1,6 @@
 // Filename - components/Footer.js
 
-import React from "react";
+
 import {
     Box,
     FooterContainer,
