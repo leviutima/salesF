@@ -19,25 +19,25 @@ const Footer = () => {
                     <Row>
                         <Column>
                             <Heading>Sobre nós</Heading>
-                            <FooterLink href="/Salesforce">
+                            <FooterLink to="/Salesforce">
                                 O que é a Salesforce?
                             </FooterLink>
-                            <FooterLink href="/crm">
+                            <FooterLink to="/crm">
                                 O que é CRM?
                             </FooterLink>
                         </Column>
                         <Column>
                             <Heading>Produtos</Heading>
-                            <FooterLink href="/salescloud">
+                            <FooterLink to="/salescloud">
                                 Sales Cloud
                             </FooterLink>
-                            <FooterLink href="/einstein-gpt">
+                            <FooterLink to="/einstein-gpt">
                                 Einstein GPT
                             </FooterLink>
                         </Column>
                         <Column>
                             <Heading>Contato</Heading>
-                            <FooterLink href="/contato">
+                            <FooterLink to="/contato">
                                 Fale conosco
                             </FooterLink>
                         </Column>

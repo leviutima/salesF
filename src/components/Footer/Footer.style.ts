@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { colors } from "../../styles/colors";
+import { Link } from "react-router-dom";
 
 export const Box = styled.div`
 	display:flex;
@@ -61,7 +62,7 @@ export const Row = styled.div`
 	}
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(Link)`
 	color: #000;
 	margin-bottom: 10px;
 	font-size: 12px;
