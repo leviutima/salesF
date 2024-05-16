@@ -32,7 +32,7 @@ function Contact() {
         event.preventDefault();
 
         try {
-            const response = await fetch('https://api-challenge-iuga.vercel.app/contatenos', {
+            const response = await fetch('https://api-challenge-theta.vercel.app/contatenos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
