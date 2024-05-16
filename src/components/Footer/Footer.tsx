@@ -37,7 +37,7 @@ const Footer = () => {
                         </Column>
                         <Column>
                             <Heading>Contato</Heading>
-                            <FooterLink to="/contato">
+                            <FooterLink to="/Entre-em-contato">
                                 Fale conosco
                             </FooterLink>
                         </Column>
