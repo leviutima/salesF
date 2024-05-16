@@ -4,6 +4,7 @@ import { Button } from "../../components/Button/Button";
 import { Layout } from "../../components/Layout/Layout";
 import { BackgroundForm, FormSection, Input, InputBox, ParagraphForm } from "./Contact.style";
 import { ConfigDiv, FlexSection, MainPageTitle, SectionConfig } from "../../components/Sections/Sections.style";
+import group from '../../assets/images/Group 26.png'
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -65,7 +66,7 @@ function Contact() {
                                 <p>Podemos te ajudar!</p>
                             </div>
                             <div>
-                                <img src="src\assets\images\Group 26.png" alt="Illustration"></img>
+                                <img src={group} alt="Illustration"></img>
                             </div>
                         </ConfigDiv>
                     </SectionConfig>
