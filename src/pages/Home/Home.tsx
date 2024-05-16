@@ -5,6 +5,10 @@ import { MainPageTitle, FlexSection, Section } from "../../components/Sections/S
 import { Layout } from "../../components/Layout/Layout";
 import { Button } from "../../components/Button/Button"
 import titulo from '../../assets/images/what-is-astro-product-family.png'
+import sell from '../../assets/images/how-to-sell.jpg'
+import crm  from '../../assets/images/php-rc-what-is-crm.jpg'
+import salesImage from '../../assets/images/sales-image-mx.png'
+import einstein from '../../assets/images/einsteinpng.png'
 
 
 
@@ -25,7 +29,7 @@ function Home() {
               <h2>O que é a Salesforce?</h2>
             </Link>
             <Link to="/salesforce">
-              <img src="src\assets\images\how-to-sell.jpg" alt="" />
+              <img src={sell} alt="" />
             </Link>
             <Link to="/salesforce">
               <Button onClick={() => {}}>Saiba Mais sobre a Salesforce</Button>
@@ -37,7 +41,7 @@ function Home() {
               <h2>O que é CRM?</h2>
             </Link>
             <Link to="/crm">
-              <img src="src\assets\images\php-rc-what-is-crm.jpg" alt="" />
+              <img src={crm} alt="" />
             </Link>
             <Link to="/crm">
               <Button onClick={() => {}}>Saiba Mais sobre CRM</Button>
@@ -53,7 +57,7 @@ function Home() {
                 <h2>Sales Cloud</h2>
               </Link>
               <Link to="/salescloud">
-                <img src="src\assets\images\sales-image-mx.png" alt="" />
+                <img src={salesImage} alt="" />
               </Link>
               <Link to="/salescloud">
                 <Button onClick={() => {}}>Saiba Mais sobre Sales Cloud</Button>
@@ -65,7 +69,7 @@ function Home() {
                 <h2>Einstein GPT</h2>
               </Link>
               <Link to="/einstein-gpt">
-                <img src="src\assets\images\einsteinpng.png" alt="" />
+                <img src={einstein} alt="" />
               </Link>
               <Link to="/einstein-gpt">
                 <Button onClick={() => {}}>Saiba Mais sobre o Einstein GPT</Button>
