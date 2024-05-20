@@ -3,6 +3,7 @@ import { Button } from "../../components/Button/Button"
 import { Layout } from "../../components/Layout/Layout"
 import { BackgroundForm, FormSection, Input, InputBox, ParagraphForm } from "./Contact.style"
 import { ConfigDiv, FlexSection, MainPageTitle, SectionConfig } from "../../components/Sections/Sections.style"
+import group26 from '../../assets/images/Group 26.png'
 
 function Contact() {
 
@@ -72,7 +73,7 @@ function Contact() {
                                 <p>Preencha o formulário ou ligue para <strong>0800 891 1887.</strong></p>
                             </div>
                             <div>
-                                <img src="src\assets\images\Group 26.png" alt="Imagem ilustrativa"></img>
+                                <img src={group26} alt="Imagem ilustrativa"></img>
                             </div>
                         </ConfigDiv>
                     </SectionConfig>
