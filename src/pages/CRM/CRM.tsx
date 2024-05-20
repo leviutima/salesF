@@ -2,6 +2,7 @@
 import { Section, ProductImage,  SectionGridImgRight, MainPageTitleDesc, SectionGridImgLeftSmall, ProdDesc } from "../../components/Sections/Sections.style"
 import { Layout } from "../../components/Layout/Layout.tsx";
 import Video from "../../components/Video/Video.tsx";
+import imgCRM from '../../assets/images/smb-sfstartups-hero1x.png'
 
 
 export function CRM() {
@@ -17,7 +18,7 @@ export function CRM() {
                     </SectionGridImgRight>
                     <SectionGridImgLeftSmall>
                         <ProductImage>
-                            <img src="src\assets\images\smb-sfstartups-hero1x.png" alt="" />
+                            <img src={imgCRM} alt="" />
                         </ProductImage>
                         <ProdDesc>
                             <h2>O que sua pequena empresa precisa saber sobre CRM?</h2>
