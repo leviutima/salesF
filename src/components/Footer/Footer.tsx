@@ -1,3 +1,5 @@
+import logo from '../../assets/logo-salesforce.svg'
+
 import {
     Box,
     FooterContainer,
@@ -13,7 +15,7 @@ const Footer = () => {
     return (
             <Box>
                 <Logo>
-                    <img src="src\assets\logo-salesforce.svg" alt="" />
+                    <img src={logo} alt="" />
                 </Logo>
                 <FooterContainer>
                     <Row>

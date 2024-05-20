@@ -25,6 +25,10 @@ function Einstein() {
                                 <h3>2. Aumento da produtividade</h3>
                                 <p>A automação é a chave para aprimorar a produtividade, e o Einstein GPT faz isso de forma excepcional. Ao automatizar tarefas repetitivas e fornecer insights acionáveis, permite que os profissionais de vendas e marketing dediquem mais tempo a atividades estratégicas e menos a processos operacionais. Esse é um movimento essencial para as empresas que querem crescem com foco, uma vez que se traduz em maior eficiência operacional e melhores resultados financeiros.</p>
                             </div>
+                            <div>
+                                <h3>3. Inovação Simplificada</h3>
+                                <p>A capacidade do Einstein GPT de processar grandes volumes de dados e transformá-los em insights valiosos simplifica o processo de inovação. Ele oferece informações preditivas sobre tendências de mercado, comportamento do cliente e oportunidades de crescimento. Dessa maneira, as empresas têm condições de identificar novas estratégias e oportunidades de negócios com base em informações precisas e atualizadas.</p>
+                            </div>
                        </SectionConfig>
                        <img src={image9}/> 
                      </SectionGridImgRight>
