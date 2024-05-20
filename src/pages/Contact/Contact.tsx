@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from "../../components/Button/Button"
 import { Layout } from "../../components/Layout/Layout"
 import { BackgroundForm, FormSection, Input, InputBox, ParagraphForm } from "./Contact.style"
