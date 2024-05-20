@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Button } from "../../components/Button/Button"
 import { Layout } from "../../components/Layout/Layout"
 import { BackgroundForm, FormSection, Input, InputBox, ParagraphForm } from "./Contact.style"
 import { ConfigDiv, FlexSection, MainPageTitle, SectionConfig } from "../../components/Sections/Sections.style"
-
 
 function Contact() {
 
@@ -21,7 +20,7 @@ function Contact() {
     });
 
     // Função para lidar com a mudança nos inputs do formulário
-    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = event.target;
         setFormData(prevState => ({
             ...prevState,
@@ -30,7 +29,7 @@ function Contact() {
     };
 
     // Função para lidar com o envio do formulário
-    const handleSubmit = async (event: React.FormEvent) => {
+    const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
 
         try {
@@ -73,11 +72,11 @@ function Contact() {
                                 <p>Preencha o formulário ou ligue para <strong>0800 891 1887.</strong></p>
                             </div>
                             <div>
-                                <img src="src\assets\images\Group 26.png"></img>
+                                <img src="src\assets\images\Group 26.png" alt="Imagem ilustrativa"></img>
                             </div>
                         </ConfigDiv>
                     </SectionConfig>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <FormSection>
                             <ParagraphForm>
                                 <p>
@@ -118,8 +117,8 @@ function Contact() {
                             </div>
                             <div>
                                 <label htmlFor="pais">País/Região *</label><br/>
-                                <select id="pais" name="pais" value={formData.pais} onChange={handleInputChange} aria-required="true" required="true" style={Input} required>
-                                    <option disabled="" label="-- País/Região --" selected="" value="--País/Região--">País/Região</option>
+                                <select id="pais" name="pais" value={formData.pais} onChange={handleInputChange} aria-required="true" style={Input} required>
+                                    <option disabled selected value="">-- País/Região --</option>
                                     <option value="US">Estados Unidos</option>
                                     <option value="AF">Afeganistão</option>
                                     <option value="AL">Albânia</option>
@@ -365,4 +364,4 @@ function Contact() {
     )
 }
 
-export default Contact
+export default Contact;
